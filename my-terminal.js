@@ -15,9 +15,9 @@ $(document).ready(function () {
   const directories = {
     education: [
       "<white>Education</white>",
-      '* <a href="https://en.wikipedia.org/wiki/Kielce_University_of_Technology">Kielce University of Technology</a> <yellow>"Computer Science"</yellow> 2002-2007 / 2011-2014',
-      '* <a href="https://pl.wikipedia.org/wiki/Szko%C5%82a_policealna">Post-secondary</a> Electronic School <yellow>"Computer Systems"</yellow> 2000-2002',
-      '* Electronic <a href="https://en.wikipedia.org/wiki/Technikum_(Polish_education)">Technikum</a> with major <yellow>"RTV"</yellow> 1995-2000',
+      '* <a href="https://www.viva-technology.org/">VIVA Institute of Technology</a> <yellow>"Computer Science"</yellow> 2019-2023',
+      '* <a href="https://en.wikipedia.org/wiki/Maharashtra_State_Board_of_Secondary_and_Higher_Secondary_Education">High Secondary</a> J.H.Poddar Junior College <yellow>"Computer Science"</yellow> 2017-2019',
+      '* <a href="https://en.wikipedia.org/wiki/Maharashtra_State_Board_of_Secondary_and_Higher_Secondary_Education">Secondary School Certificate</a> Divine Hymn Hindi High School <yellow>"Hindi Medium"</yellow> 2017',
     ],
     projects: [
       "<white>Projects</white>",
@@ -29,9 +29,9 @@ $(document).ready(function () {
       ],
       [
         "Crypto Website",
-        "#",
-        "A MERN stack-based cryptocurrency website (Coming Soon!)",
-        50,
+        "https://crypto-wallet-frontend-roan.vercel.app/",
+        "A MERN stack-based cryptocurrency website..",
+        90,
       ],
     ].map(([name, url, description = "", progress = 0]) => {
       return `* <a href="${url}">${name}</a> &mdash; <white>${description}</white> <green>[${progress}%]</green> ${renderProgressBar(
@@ -40,13 +40,13 @@ $(document).ready(function () {
     }),
     skills: [
       "<white>Languages</white>",
-      ["JavaScript", "TypeScript", "Python", "SQL", "PHP", "Bash"].map(
+      ["JavaScript", "TypeScript", "Python", "SQL", "C", "C++"].map(
         (lang) => `* <yellow>${lang}</yellow>`
       ),
       "<white>Libraries</white>",
-      ["React.js", "Redux", "Jest"].map((lib) => `* <green>${lib}</green>`),
+      ["React.js", "Redux","Next JS", "Jest"].map((lib) => `* <green>${lib}</green>`),
       "<white>Tools</white>",
-      ["Docker", "git", "GNU/Linux"].map((tool) => `* <blue>${tool}</blue>`),
+      ["Docker", "git","Bit Bucket", "GNU/Linux"].map((tool) => `* <blue>${tool}</blue>`),
     ].flat(),
   };
 
@@ -116,9 +116,8 @@ $(document).ready(function () {
       term.echo(
         "Social Media Profiles:\n" +
           "* LinkedIn: [[b;cyan;]https://linkedin.com/in/abhishek]\n" +
-          "* GitHub: [[b;cyan;]https://github.com/abhitech2002]\n" +
-          "* Twitter: [[b;cyan;]https://twitter.com/abhitech2002]"
-      );
+          "* GitHub: [[b;cyan;]https://github.com/abhitech2002]\n" 
+        );
     },
     download_resume() {
       const resumeLink =
@@ -268,7 +267,7 @@ $(document).ready(function () {
       theme.scrollbarColor
     );
     currentTheme = themeName;
-    localStorage.setItem("theme", themeName); // Save theme preference
+    localStorage.setItem("theme", themeName);
   }
 
   figlet.defaults({ fontPath: "https://unpkg.com/figlet/fonts/" });
